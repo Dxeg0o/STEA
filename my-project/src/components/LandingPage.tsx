@@ -395,9 +395,9 @@ export default function LandingPage() {
                 className="bg-white p-6 rounded-lg shadow-lg"
               >
                 <p className="text-green-700 mb-4">
-                  "EspárragoTech ha revolucionado nuestra forma de trabajar. La
-                  calidad de nuestras exportaciones ha mejorado
-                  significativamente."
+                  &quot;EspárragoTech ha revolucionado nuestra forma de
+                  trabajar. La calidad de nuestras exportaciones ha mejorado
+                  significativamente.&quot;
                 </p>
                 <p className="font-bold text-green-800">
                   - María Rodríguez, Gerente de Calidad
@@ -408,12 +408,12 @@ export default function LandingPage() {
                 className="bg-white p-6 rounded-lg shadow-lg"
               >
                 <p className="text-green-700 mb-4">
-                  "Gracias a su tecnología, hemos reducido nuestros costos
+                  &quot;Gracias a su tecnología, hemos reducido nuestros costos
                   operativos en un 30%. Una inversión que realmente vale la
-                  pena."
+                  pena.&quot;
                 </p>
                 <p className="font-bold text-green-800">
-                  - Carlos Mendoza, Director de Operaciones
+                  - Carlos Soler, Director de Operaciones
                 </p>
               </motion.div>
               <motion.div
@@ -421,9 +421,9 @@ export default function LandingPage() {
                 className="bg-white p-6 rounded-lg shadow-lg"
               >
                 <p className="text-green-700 mb-4">
-                  "El soporte técnico de EspárragoTech es excepcional. Siempre
-                  están disponibles para ayudarnos a optimizar nuestros
-                  procesos."
+                  &quot;El soporte técnico de EspárragoTech es excepcional.
+                  Siempre están disponibles para ayudarnos a optimizar nuestros
+                  procesos.&quot;
                 </p>
                 <p className="font-bold text-green-800">
                   - Ana Gómez, Supervisora de Producción
