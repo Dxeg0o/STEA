@@ -41,7 +41,7 @@ export default function LandingPage() {
         <Link className="flex items-center justify-center" href="#">
           <Leaf className="h-6 w-6 text-green-600" />
           <span className="ml-2 text-2xl font-bold text-green-800">
-            EspárragoTech
+            STASS Esparragos
           </span>
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
