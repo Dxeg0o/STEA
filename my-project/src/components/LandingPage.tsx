@@ -26,7 +26,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import logo from "../../images/logo.png";
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

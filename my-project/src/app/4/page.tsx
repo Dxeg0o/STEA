@@ -14,9 +14,22 @@ import {
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import axios from "axios";
 
+// Define a type for the result (you can adjust this based on the actual response structure)
+interface ImageResult {
+  predictions: Array<{
+    label: string;
+    confidence: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  }>;
+  image: string;
+}
+
 export default function ImageUpload() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<ImageResult | null>(null); // Specify the type here
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -61,7 +74,7 @@ export default function ImageUpload() {
           },
         });
 
-        setResult(response.data);
+        setResult(response.data as ImageResult); // Type assertion for result
       } catch (error) {
         console.error("Error al procesar la imagen: ", error);
         setError(
