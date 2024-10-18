@@ -6,7 +6,7 @@ export default function Home() {
   const [altura, setAltura] = useState(null);
   const [radio, setRadio] = useState(null);
   const [grafico, setGrafico] = useState(null);
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
 
   const calcular = async () => {
     try {

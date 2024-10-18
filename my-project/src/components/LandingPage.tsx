@@ -45,8 +45,8 @@ export default function LandingPage() {
           <Image
             src="/images/logo2.png"
             alt="Logo"
-            width={175} // Adjust the width as needed
-            height={105} // Adjust the height as needed
+            width={140} // Adjust the width as needed
+            height={84} // Adjust the height as needed
           />
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">

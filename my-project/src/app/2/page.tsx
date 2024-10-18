@@ -1,4 +1,3 @@
-import LandingPage from "@/components/LandingPage";
 import { AnalizadorVideo } from "@/components/analizador-video";
 
 export default function Home() {
