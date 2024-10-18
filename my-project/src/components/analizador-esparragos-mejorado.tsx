@@ -1,22 +1,29 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { CheckCircle, XCircle, Ruler, Circle } from 'lucide-react'
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle, XCircle, Ruler, Circle } from "lucide-react";
 
 export function AnalizadorEsparragosMejorado() {
-  const [altura, setAltura] = useState(522)
-  const [calibre, setCalibre] = useState(42)
-  const alturaMinima = 500
-  const calibreMinimo = 40
+  const [altura] = useState(522);
+  const [calibre] = useState(42);
+  const alturaMinima = 500;
+  const calibreMinimo = 40;
 
-  const cumpleRequisitos = altura >= alturaMinima && calibre >= calibreMinimo
+  const cumpleRequisitos = altura >= alturaMinima && calibre >= calibreMinimo;
 
-  const calcularPorcentaje = (valor: number, minimo: number, maximo: number) => {
-    return Math.min(Math.max(((valor - minimo) / (maximo - minimo)) * 100, 0), 100)
-  }
+  const calcularPorcentaje = (
+    valor: number,
+    minimo: number,
+    maximo: number
+  ) => {
+    return Math.min(
+      Math.max(((valor - minimo) / (maximo - minimo)) * 100, 0),
+      100
+    );
+  };
 
   return (
     <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 min-h-screen">
@@ -35,8 +42,12 @@ export function AnalizadorEsparragosMejorado() {
             </div>
           </div>
           <div className="p-8 w-full">
-            <div className="uppercase tracking-wide text-sm text-green-500 font-semibold mb-1">Análisis de Calidad</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Espárrago Verde</h2>
+            <div className="uppercase tracking-wide text-sm text-green-500 font-semibold mb-1">
+              Análisis de Calidad
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Espárrago Verde
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader className="pb-2">
@@ -45,8 +56,17 @@ export function AnalizadorEsparragosMejorado() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{altura} mm</div>
-                  <Progress value={calcularPorcentaje(altura, alturaMinima, alturaMinima * 1.5)} className="h-2" />
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {altura} mm
+                  </div>
+                  <Progress
+                    value={calcularPorcentaje(
+                      altura,
+                      alturaMinima,
+                      alturaMinima * 1.5
+                    )}
+                    className="h-2"
+                  />
                 </CardContent>
               </Card>
               <Card>
@@ -56,8 +76,17 @@ export function AnalizadorEsparragosMejorado() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{calibre} mm</div>
-                  <Progress value={calcularPorcentaje(calibre, calibreMinimo, calibreMinimo * 1.5)} className="h-2" />
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {calibre} mm
+                  </div>
+                  <Progress
+                    value={calcularPorcentaje(
+                      calibre,
+                      calibreMinimo,
+                      calibreMinimo * 1.5
+                    )}
+                    className="h-2"
+                  />
                 </CardContent>
               </Card>
             </div>
@@ -70,11 +99,19 @@ export function AnalizadorEsparragosMejorado() {
                     <XCircle className="text-red-500 mr-2" size={24} />
                   )}
                   <span className="font-semibold text-lg">
-                    {cumpleRequisitos ? 'APROBADO' : 'NO APROBADO'}
+                    {cumpleRequisitos ? "APROBADO" : "NO APROBADO"}
                   </span>
                 </div>
-                <Badge className={cumpleRequisitos ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}>
-                  {cumpleRequisitos ? 'Cumple estándares' : 'No cumple estándares'}
+                <Badge
+                  className={
+                    cumpleRequisitos
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }
+                >
+                  {cumpleRequisitos
+                    ? "Cumple estándares"
+                    : "No cumple estándares"}
                 </Badge>
               </CardContent>
             </Card>
@@ -82,5 +119,5 @@ export function AnalizadorEsparragosMejorado() {
         </div>
       </div>
     </div>
-  )
+  );
 }

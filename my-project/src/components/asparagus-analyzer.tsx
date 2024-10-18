@@ -6,8 +6,8 @@ import { Progress } from "@/components/ui/progress";
 import { CheckCircle, XCircle, Ruler, Circle } from "lucide-react";
 
 export default function Component() {
-  const [altura, setAltura] = useState(522);
-  const [calibre, setCalibre] = useState(42);
+  const [altura] = useState(522);
+  const [calibre] = useState(42);
   const alturaMinima = 18;
   const calibreMinimo = 40;
 

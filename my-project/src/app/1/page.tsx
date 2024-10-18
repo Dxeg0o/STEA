@@ -1,4 +1,3 @@
-import LandingPage from "@/components/LandingPage";
 import { CalidadEsparragosMejorado } from "@/components/calidad-esparragos-mejorado";
 
 export default function Home() {

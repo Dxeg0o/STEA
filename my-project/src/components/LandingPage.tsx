@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,10 +41,12 @@ export default function LandingPage() {
     <div className="flex flex-col min-h-screen bg-green-50">
       <header className="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
         <Link className="flex items-center justify-center" href="#">
-          <Leaf className="h-6 w-6 text-green-600" />
-          <span className="ml-2 text-2xl font-bold text-green-800">
-            STASS Esparragos
-          </span>
+          <Image
+            src="/images/logo2.png"
+            alt="Logo"
+            width={140} // Adjust the width as needed
+            height={84} // Adjust the height as needed
+          />
         </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
           <Link
